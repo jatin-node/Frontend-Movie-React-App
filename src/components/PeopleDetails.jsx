@@ -1,6 +1,6 @@
 import React from 'react'
 
-const movieDetails = () => {
+const PeopleDetails = () => {
   return (
     <div>
       
@@ -8,4 +8,4 @@ const movieDetails = () => {
   )
 }
 
-export default movieDetails
+export default PeopleDetails

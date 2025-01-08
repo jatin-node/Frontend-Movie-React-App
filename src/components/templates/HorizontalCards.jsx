@@ -1,11 +1,13 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const HorizontalCards = ({ data }) => {
   return (
     <div className="px-5">
       <div className="w-[100%] h-[45vh] flex overflow-y-hidden">
         {data.map((item, index) => (
-          <div
+          <Link
+          to={`/${item.media_type || "movie"}/Details/${item.id}`} 
             key={index}
             className="min-w-[18%] bg-gradient-to-b from-zinc-600 from-15% mr-5 rounded-xl overflow-hidden"
           >
@@ -27,7 +29,7 @@ const HorizontalCards = ({ data }) => {
                 {item.overview}
               </p>
             </div>
-          </div>
+          </Link>
         ))}
       </div>
     </div>

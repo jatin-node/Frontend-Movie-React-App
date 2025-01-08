@@ -10,6 +10,9 @@ import Popular from './components/Popular'
 import Movie from './components/Movie'
 import TvShows from './components/TvShows'
 import People from './components/People'
+import MovieDetails from './components/MovieDetails'
+import TvDetails from './components/tvDetails'
+import PeopleDetails from './components/peopleDetails'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -17,17 +20,19 @@ function App() {
   return (
     <>
       <div className='w-screen h-screen bg-[#1F1E24] flex'>
-
         
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/trending' element={<Trending />} />
           <Route path='/popular' element={<Popular />} />
           <Route path='/movie' element={<Movie />} />
-          <Route path='/movie/Details/:id' element={<movieDetails />} />
+          <Route path='/movie/Details/:id' element={<MovieDetails/>} />
 
           <Route path='/tvShows' element={<TvShows />} />
+          <Route path='/tvShows/Details/:id' element={<TvDetails  />} />
+
           <Route path='/people' element={<People />} />
+          <Route path='/people/Details/:id' element={<PeopleDetails  />} />
         </Routes>
 
 
