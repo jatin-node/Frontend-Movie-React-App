@@ -19,12 +19,13 @@ function App() {
       <div className='w-screen h-screen bg-[#1F1E24] flex'>
 
         
-
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/trending' element={<Trending />} />
           <Route path='/popular' element={<Popular />} />
           <Route path='/movie' element={<Movie />} />
+          <Route path='/movie/Details/:id' element={<movieDetails />} />
+
           <Route path='/tvShows' element={<TvShows />} />
           <Route path='/people' element={<People />} />
         </Routes>

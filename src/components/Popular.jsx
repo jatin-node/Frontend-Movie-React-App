@@ -55,7 +55,7 @@ const Popular = () => {
         dataLength={popular.length}
         next={getPopular}
         hasMore={hasmore}
-        loader={<h1 className="text-3xl text-zinc-400 bg-[#1F1e24] px-[3%]">Loading...</h1>}
+        loader={<h1 className="h-[5vh] text-3xl text-zinc-400 bg-[#1F1e24] px-[3%]">Loading...</h1>}
         endMessage={
             <p style={{ color:"white", textAlign: 'center', backgroundColor: "#1F1E24"}}>
               <b>Yay! You have seen it all</b>

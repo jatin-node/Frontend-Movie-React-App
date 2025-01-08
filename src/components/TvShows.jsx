@@ -55,7 +55,7 @@ const TvShows = () => {
             next={getTvShows}
             hasMore={hasmore}
             loader={
-              <h1 className="text-3xl text-zinc-400 bg-[#1F1e24] px-[3%]">
+              <h1 className="h-[5vh] text-3xl text-zinc-400 bg-[#1F1e24] px-[3%]">
                 Loading...
               </h1>
             }
