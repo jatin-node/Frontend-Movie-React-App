@@ -40,7 +40,7 @@ const Movie = () => {
           ></i>
           Movies
         </h1>
-        <div className="flex items-center justify-end gap-10 w-full">
+        <div className="flex items-center  gap-10 w-full">
           <TopNav />
           <Dropdown
             title="Category"
@@ -71,7 +71,7 @@ const Movie = () => {
           </p>
         }
       >
-        <Cards data={movie} title={category} />
+        <Cards data={movie} title="movie" />
       </InfiniteScroll>
     </div>
   ) : (

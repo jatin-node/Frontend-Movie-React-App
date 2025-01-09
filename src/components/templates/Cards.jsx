@@ -2,10 +2,11 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 const Cards = ({ data, title }) => {
+  console.log(data)
   return (
     <div className="  flex flex-wrap h-full w-full px-[3%] bg-[#1F1E24]">
       {data.map((c, i) => (
-        <Link to={`${data.media_type || title}/Details/${c.id}`} className="relative w-[30vh] mr-[4%] mb-[4%] rounded-lg" key={i}>
+        <Link to={`/${data.media_type || c.media_type || title}/Details/${c.id}`} className="relative w-[30vh] mr-[4%] mb-[4%] rounded-lg" key={i}>
           <img
             className="shadow-[8px_17px_38px_2px_rgba(0,0,0,0.5)] h-[40vh] object-cover rounded-lg"
             src={`https://image.tmdb.org/t/p/original${

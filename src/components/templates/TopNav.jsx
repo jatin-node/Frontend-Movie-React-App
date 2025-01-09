@@ -20,7 +20,7 @@ const TopNav = () => {
   }, [query]);
 
   return (
-    <div className="fixed w-[85%] h-[10vh] left-0 bg-[#1F1E24] flex ml-[15%] items-center px-10">
+    <div className="relative w-[85%] h-[10vh] left-0 bg-[#1F1E24] flex ml-[15%] items-center px-10">
       {/* Applied fixed and left-0 after a long time */}
       <i className="text-zinc-400 text-3xl ri-search-line"></i>
       <input
@@ -37,7 +37,7 @@ const TopNav = () => {
         ></i>
       )}
 
-      <div className="absolute left-[10%] w-[50%] max-h-[50vh] bg-zinc-200 top-[90%] overflow-auto">
+      <div className="z-50 absolute left-[10%] w-[50%] max-h-[50vh] bg-zinc-200 top-[90%] overflow-auto">
         {searches.map((item, index) => (
           <Link
           to={`/${item.media_type || "movie"}/Details/${item.id}`}
