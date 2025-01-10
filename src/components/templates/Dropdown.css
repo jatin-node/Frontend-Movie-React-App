@@ -48,7 +48,7 @@
 
 @media (max-width: 1200px) {
   .select {
-    width: 15em;
+    width: 6.5em;
     height: 2.5em;
   }
 
@@ -63,7 +63,7 @@
 
 @media (max-width: 800px) {
   .select {
-    width: 5em;
+    width: 5  em;
     height: 2em;
   }
 
@@ -72,7 +72,6 @@
   }
 
   .select::after {
-    padding: 0 0.5em;
-    top: -6px;
+    top: -8px;
   }
 }

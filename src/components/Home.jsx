@@ -12,6 +12,7 @@ const Home = () => {
   const [wallpaper, setWallpaper] = useState(null); // Storing One random movie wallpaper
   const [trending, setTrending] = useState(); // Storing Trending movies
   const [category, setCategory] = useState("all"); // Storing category
+  const [isVisible, setIsVisible] = useState(false);
 
   // Fetching random wallpaper
   const getwallpaper = async () => {
@@ -40,9 +41,19 @@ const Home = () => {
 
   return wallpaper && trending ? (
     <>
-      <SideNav />
+      <SideNav isVisible={isVisible} setIsVisible={setIsVisible} />
       <div className="w-full md:w-[95%] md:ml-[5%] h-full overflow-auto overflow-x-hidden">
+        <div  className="flex items-center">
+
+        {/* <div className="flex relative xl:w-[85%] md:h-[10vh] left-0 bg-[#0F1014] xl:ml-[15%] items-center px-10"> */}
+          <i
+            className="w-[20%] z-[100] ml-10 block md:hidden text-white ri-menu-line"
+            onClick={() => setIsVisible(!isVisible)}
+          ></i>
+        {/* </div> */}
         <TopNav />
+        </div>
+
         <Header data={wallpaper} />
 
         <div className="mb-5 flex justify-between items-center px-5 pt-6">

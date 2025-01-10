@@ -21,7 +21,7 @@ function App() {
 
   return (
     <>
-      <div className="w-screen h-screen bg-[#0F1014] flex">
+      <div className="min-w-screen min-h-screen bg-[#0F1014] flex relative">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/trending" element={<Trending />} />

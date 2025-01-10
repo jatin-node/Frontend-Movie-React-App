@@ -1,21 +1,22 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 
-const SideNav = () => {
+const SideNav = ({ isVisible, setIsVisible }) => {
   const [isHovered, setIsHovered] = useState(false);
   const navigate = useNavigate();
 
   return (
     <div
-      className={`fixed z-[100] left-0 h-screen bg-[#0F1014] p-6 flex flex-col justify-around items-start transition-all duration-300 ${
-        isHovered ? "w-[10%]" : "w-[5%]"
-      } hidden md:flex`}
+      className={`fixed z-[100] pr-12 left-0 h-screen bg-[#0F1014] p-6 flex flex-col justify-around items-start transition-all duration-300 ${
+        isHovered ? "w-[30%]" : "w-[5%]"
+      } ${isVisible ? "flex" : "hidden"} ${isVisible ? "w-[30%]" : "w-0"} md:flex`}
     >
       <h1
-        className="text-4xl text-white font-bold cursor-pointer"
+        className="text-4xl flex flex-col gap-4 text-white font-bold cursor-pointer"
         onClick={() => navigate("/")}
       >
         <i className="text-[#6556CD] ri-tv-fill"></i>
+        {/* <i class=" ri-close-large-line"></i> */}
       </h1>
 
       <nav className="flex flex-col text-xl">

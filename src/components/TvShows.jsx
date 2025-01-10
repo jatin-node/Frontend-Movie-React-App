@@ -45,11 +45,13 @@ const TvShows = () => {
           </h1>
           <div className="flex items-center  gap-10 w-full">
             <TopNav />
-            <Dropdown
-              title="Category"
-              options={["popular", "top_rated", "airing_today", "on_the_air"]}
-              func={(e) => setCategory(e.target.value)}
-            />
+            <span className="hidden   md:inline-flex items-center gap-10 w-[50%]">
+              <Dropdown
+                title="Category"
+                options={["popular", "top_rated", "airing_today", "on_the_air"]}
+                func={(e) => setCategory(e.target.value)}
+              />
+            </span>
           </div>
         </div>
 

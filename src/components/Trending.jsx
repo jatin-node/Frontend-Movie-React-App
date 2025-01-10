@@ -39,7 +39,7 @@ const Trending = () => {
 
   return trending ? (
     <>
-    <SideNav/>
+      <SideNav />
       <div className=" w-[95%] ml-[5%] h-full ">
         <div className="w-full flex items-center justify-between px-[3%] py-[1%]">
           <h1 className="text-3xl font-semibold text-zinc-400">
@@ -50,17 +50,19 @@ const Trending = () => {
             Trending
           </h1>
           <div className="flex items-center  gap-10 w-full">
-            <TopNav />  
-            <Dropdown
-              title="Category"
-              options={["all", "movie", "tv"]}
-              func={(e) => setCategory(e.target.value)}
-            />
-            <Dropdown
-              title="Duration"
-              options={["day", "week"]}
-              func={(e) => setDuration(e.target.value)}
-            />
+            <TopNav />
+            <div className="hidden   md:inline-flex items-center gap-10 w-[50%]">
+              <Dropdown
+                title="Category"
+                options={["all", "movie", "tv"]}
+                func={(e) => setCategory(e.target.value)}
+              />
+              <Dropdown
+                title="Duration"
+                options={["day", "week"]}
+                func={(e) => setDuration(e.target.value)}
+              />
+            </div>
           </div>
         </div>
 
