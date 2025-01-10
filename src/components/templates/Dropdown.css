@@ -45,3 +45,34 @@
 .select:hover::after {
   color: #6556cd;
 }
+
+@media (max-width: 1200px) {
+  .select {
+    width: 15em;
+    height: 2.5em;
+  }
+
+  .select select {
+    font-size: 0.875rem;
+  }
+
+  .select::after {
+    padding: 0 0.75em;
+  }
+}
+
+@media (max-width: 800px) {
+  .select {
+    width: 5em;
+    height: 2em;
+  }
+
+  .select select {
+    font-size: 0.75rem;
+  }
+
+  .select::after {
+    padding: 0 0.5em;
+    top: -6px;
+  }
+}

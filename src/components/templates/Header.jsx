@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
 const Header = ({ data }) => {
@@ -11,21 +11,32 @@ const Header = ({ data }) => {
         backgroundSize: "cover",
         backgroundPosition: "center",
       }}
-      className="w-full h-[80vh] flex flex-col items-start justify-end p-[8%]"
+      className="w-full h-[50vh] md:h-[80vh] flex flex-col items-start justify-end p-[8%]"
     >
-      <h1 className="w-[70%] text-white text-5xl font-bold">
+      <h1 className="w-[70%] text-white text-xl sm:text-3xl md:text-5xl font-bold">
         {data.original_title || data.name || data.title || data.original_name}
       </h1>
-      <p className="w-[70%] text-white mt-5">
+      <p className="w-[70%] text-xs sm:text-sm md:text-base text-white mt-5">
         {data.overview.slice(0, 200)}...
-        <Link to={`${data.media_type}/Details/${data.id}`} className="text-blue-400">more</Link>
+        <Link
+          to={`${data.media_type}/Details/${data.id}`}
+          className="text-blue-400"
+        >
+          more
+        </Link>
       </p>
-      <p className="text-white mt-5">
-        <i className=" text-yellow-200 ri-megaphone-fill"></i> {data.release_date || data.first_air_date || "Unknown"}
-        <i className="ml-5 text-yellow-200 ri-album-fill"></i> {data.media_type.toUpperCase()}
+      <p className="text-white mt-5 text-xs sm:text-sm md:text-base">
+        <i className=" text-yellow-200 ri-megaphone-fill"></i>{" "}
+        {data.release_date || data.first_air_date || "Unknown"}
+        <i className="ml-5 text-yellow-200 ri-album-fill"></i>{" "}
+        {data.media_type.toUpperCase()}
       </p>
-      <Link to={`${data.media_type}/details/${data.id}/trailer`} className="bg-[#6556CD] mt-5 p-4 rounded-xl text-white">Watch Trailer</Link>
-
+      <Link
+        to={`${data.media_type}/details/${data.id}/trailer`}
+        className="bg-[#6556CD] mt-5 px-3 py-2 md:p-4 rounded-xl text-white"
+      >
+        Watch Trailer
+      </Link>
     </div>
   );
 };

@@ -1,47 +1,128 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
 
 const SideNav = () => {
+  const [isHovered, setIsHovered] = useState(false);
+  const navigate = useNavigate();
 
   return (
-    <div className="w-[15%] h-full border-r-2 border-zinc-600 p-10 ">
-      <h1 className="text-4xl text-white font-bold ">
+    <div
+      className={`fixed z-[100] left-0 h-screen bg-[#0F1014] p-6 flex flex-col justify-around items-start transition-all duration-300 ${
+        isHovered ? "w-[10%]" : "w-[5%]"
+      } hidden md:flex`}
+    >
+      <h1
+        className="text-4xl text-white font-bold cursor-pointer"
+        onClick={() => navigate("/")}
+      >
         <i className="text-[#6556CD] ri-tv-fill"></i>
-        <span className="text-2xl"> MovieApp</span>
       </h1>
 
       <nav className="flex flex-col text-xl">
-        <h1 className="text-white font-semibold text-xl mt-10 mb-4">
-          New Feeds
-        </h1>
-        <Link to="/trending" className="text-zinc-400 hover:bg-[#6556CD] hover:text-white rounded p-3">
-          <i className="ri-fire-fill"></i> Trending
+        <Link
+          to="/trending"
+          className="text-zinc-400  hover:text-white rounded p-2"
+          onMouseEnter={() => setIsHovered(true)}
+          onMouseLeave={() => setIsHovered(false)}
+        >
+          <i className="ri-fire-fill"></i>
+          <small
+            className={`ml-2 transition-opacity duration-700 ${
+              isHovered ? "opacity-100" : "opacity-0"
+            }`}
+          >
+            Trending
+          </small>
         </Link>
-        <Link to="/popular" className="text-zinc-400 hover:bg-[#6556CD] hover:text-white rounded p-3">
-          <i className="ri-magic-fill"></i> Popular
+        <Link
+          to="/popular"
+          className="text-zinc-400  hover:text-white rounded p-3"
+          onMouseEnter={() => setIsHovered(true)}
+          onMouseLeave={() => setIsHovered(false)}
+        >
+          <i className="ri-magic-fill"></i>
+          <small
+            className={`ml-2 transition-opacity duration-500 ${
+              isHovered ? "opacity-100" : "opacity-0"
+            }`}
+          >
+            Popular
+          </small>
         </Link>
-        <Link to="/movie" className="text-zinc-400 hover:bg-[#6556CD] hover:text-white rounded p-3">
-          <i className="ri-movie-ai-line"></i> Movies
+        <Link
+          to="/movie"
+          className="text-zinc-400  hover:text-white rounded p-3"
+          onMouseEnter={() => setIsHovered(true)}
+          onMouseLeave={() => setIsHovered(false)}
+        >
+          <i className="ri-movie-ai-line"></i>
+          <small
+            className={`ml-2 transition-opacity duration-500 ${
+              isHovered ? "opacity-100" : "opacity-0"
+            }`}
+          >
+            Movies
+          </small>
         </Link>
-        <Link to="/tvShows" className="text-zinc-400 hover:bg-[#6556CD] hover:text-white rounded p-3">
-          <i className="ri-tv-fill"></i> Tv Shows
+        <Link
+          to="/tvShows"
+          className="text-zinc-400 flex items-center whitespace-nowrap  hover:text-white rounded p-3"
+          onMouseEnter={() => setIsHovered(true)}
+          onMouseLeave={() => setIsHovered(false)}
+        >
+          <i className="ri-tv-fill"></i>
+          <small
+            className={`ml-2 transition-opacity duration-500 ${
+              isHovered ? "opacity-100" : "opacity-0"
+            }`}
+          >
+            TV Shows
+          </small>
         </Link>
-        <Link to="/people" className="text-zinc-400 hover:bg-[#6556CD] hover:text-white rounded p-3">
-          <i className="ri-group-fill"></i> People
+        <Link
+          to="/people"
+          className="text-zinc-400  hover:text-white rounded p-3"
+          onMouseEnter={() => setIsHovered(true)}
+          onMouseLeave={() => setIsHovered(false)}
+        >
+          <i className="ri-group-fill"></i>
+          <small
+            className={`ml-2 transition-opacity duration-500 ${
+              isHovered ? "opacity-100" : "opacity-0"
+            }`}
+          >
+            People
+          </small>
         </Link>
       </nav>
-
-      <hr className="border-none h-[1px] bg-zinc-400 my-4" />
-      
       <nav className="flex flex-col text-xl">
-        <h1 className="text-white font-semibold text-xl mb-4">
-          Information
-        </h1>
-        <Link className="text-zinc-400 hover:bg-[#6556CD] hover:text-white rounded p-3">
-          <i className="ri-information-2-fill"></i> About
+        <Link
+          className="text-zinc-400  hover:text-white rounded p-3"
+          onMouseEnter={() => setIsHovered(true)}
+          onMouseLeave={() => setIsHovered(false)}
+        >
+          <i className="ri-information-2-fill"></i>
+          <small
+            className={`ml-2 transition-opacity duration-500 ${
+              isHovered ? "opacity-100" : "opacity-0"
+            }`}
+          >
+            About
+          </small>
         </Link>
-        <Link className="text-zinc-400 hover:bg-[#6556CD] hover:text-white rounded p-3">
-          <i className="ri-phone-fill"></i> Contact
+        <Link
+          className="text-zinc-400  hover:text-white rounded p-3"
+          onMouseEnter={() => setIsHovered(true)}
+          onMouseLeave={() => setIsHovered(false)}
+        >
+          <i className="ri-phone-fill"></i>
+          <small
+            className={`ml-2 transition-opacity duration-500 ${
+              isHovered ? "opacity-100" : "opacity-0"
+            }`}
+          >
+            Contact
+          </small>
         </Link>
       </nav>
     </div>

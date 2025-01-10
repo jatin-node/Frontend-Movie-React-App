@@ -5,6 +5,7 @@ import Cards from "./templates/Cards";
 import Dropdown from "./templates/Dropdown";
 import TopNav from "./templates/TopNav";
 import axios from "../utils/axios";
+import SideNav from "./templates/SideNav";
 
 const Movie = () => {
   const navigate = useNavigate();
@@ -31,7 +32,9 @@ const Movie = () => {
     getmovie();
   }, [category]);
   return movie ? (
-    <div className="w-full h-full ">
+    <>
+    <SideNav/>
+    <div className="w-[95%] ml-[5%] h-full ">
       <div className="w-full flex items-center justify-between px-[3%] py-[1%]">
         <h1 className="text-3xl font-semibold text-zinc-400">
           <i
@@ -55,7 +58,7 @@ const Movie = () => {
         next={getmovie}
         hasMore={hasmore}
         loader={
-          <h1 className="h-[5vh] text-3xl text-zinc-400 bg-[#1F1e24] px-[3%]">
+          <h1 className="h-[5vh] text-3xl text-zinc-400 bg-[#0F1014] px-[3%]">
             Loading...
           </h1>
         }
@@ -74,6 +77,7 @@ const Movie = () => {
         <Cards data={movie} title="movie" />
       </InfiniteScroll>
     </div>
+    </>
   ) : (
     <Loader />
   );

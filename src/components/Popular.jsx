@@ -5,6 +5,7 @@ import TopNav from "./templates/TopNav";
 import Dropdown from "./templates/Dropdown";
 import InfiniteScroll from "react-infinite-scroll-component";
 import Cards from "./templates/Cards";
+import SideNav from "./templates/SideNav";
 
 const Popular = () => {
   document.title = "MovieApp || Popular";
@@ -31,7 +32,9 @@ const Popular = () => {
     getPopular();
   }, [category]);
   return popular ? (
-    <div className="w-full h-full ">
+    <>
+    <SideNav/>
+    <div className="w-[95%] ml-[5%] h-full ">
       <div className="w-full flex items-center justify-between px-[3%] py-[1%]">
         <h1 className="text-3xl font-semibold text-zinc-400">
           <i
@@ -55,7 +58,7 @@ const Popular = () => {
         dataLength={popular.length}
         next={getPopular}
         hasMore={hasmore}
-        loader={<h1 className="h-[5vh] text-3xl text-zinc-400 bg-[#1F1e24] px-[3%]">Loading...</h1>}
+        loader={<h1 className="h-[5vh] text-3xl text-zinc-400 bg-[#0F1014] px-[3%]">Loading...</h1>}
         endMessage={
             <p style={{ color:"white", textAlign: 'center', backgroundColor: "#1F1E24"}}>
               <b>Yay! You have seen it all</b>
@@ -65,6 +68,7 @@ const Popular = () => {
         <Cards data={popular} title={category} />
       </InfiniteScroll>
     </div>
+    </>
   ) : (
     <Loader />
   );

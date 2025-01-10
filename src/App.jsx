@@ -14,13 +14,14 @@ import MovieDetails from "././components/movieDetails";
 import TvDetails from "./components/tvDetails";
 import PersonDetails from "./components/personDetails";
 import Trailer from "./components/templates/Trailer";
+import SideNav from "./components/templates/SideNav";
 
 function App() {
   const [count, setCount] = useState(0);
 
   return (
     <>
-      <div className="w-screen h-screen bg-[#1F1E24] flex">
+      <div className="w-screen h-screen bg-[#0F1014] flex">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/trending" element={<Trending />} />

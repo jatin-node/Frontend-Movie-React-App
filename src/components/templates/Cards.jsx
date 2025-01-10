@@ -1,10 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Loader from "../Loader";
 
 const Cards = ({ data, title }) => {
   console.log(data)
-  return (
-    <div className="  flex flex-wrap h-full w-full px-[3%] bg-[#1F1E24]">
+  return data ? (
+    <div className="  flex flex-wrap h-full w-full px-[3%] bg-[#0F1014]">
       {data.map((c, i) => (
         <Link to={`/${data.media_type || c.media_type || title}/Details/${c.id}`} className="relative w-[30vh] mr-[4%] mb-[4%] rounded-lg" key={i}>
           <img
@@ -27,7 +28,9 @@ const Cards = ({ data, title }) => {
         </Link>
       ))}
     </div>
-  );
+  ):(
+    <Loader/>
+  )
 };
 
 export default Cards;
