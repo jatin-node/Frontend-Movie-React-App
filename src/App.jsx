@@ -11,10 +11,9 @@ import Movie from "./components/Movie";
 import TvShows from "./components/TvShows";
 import People from "./components/People";
 import MovieDetails from "./components/MovieDetails";
-import TvDetails from "./components/tvDetails";
-import PersonDetails from "./components/personDetails";
+import TvDetails from "./components/TvDetails";
+import PersonDetails from "./components/PersonDetails";
 import Trailer from "./components/templates/Trailer";
-import SideNav from "./components/templates/SideNav";
 
 function App() {
   const [count, setCount] = useState(0);
