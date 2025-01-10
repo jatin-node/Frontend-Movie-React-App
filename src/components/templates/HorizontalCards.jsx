@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import noImage from "../../assets/noimage.jpg";
+import noImage from "../../assets/noImage.jpg";
 
 const HorizontalCards = ({ data }) => {
   return (

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 
-const SideNav = ({ isVisible, setIsVisible }) => {
+const SideNav = ({ isVisible }) => {
   const [isHovered, setIsHovered] = useState(false);
   const navigate = useNavigate();
 
