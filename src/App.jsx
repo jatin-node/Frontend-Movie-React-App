@@ -10,7 +10,7 @@ import Popular from "./components/Popular";
 import Movie from "./components/Movie";
 import TvShows from "./components/TvShows";
 import People from "./components/People";
-import MovieDetails from "././components/movieDetails";
+import MovieDetails from "./components/MovieDetails";
 import TvDetails from "./components/tvDetails";
 import PersonDetails from "./components/personDetails";
 import Trailer from "./components/templates/Trailer";
