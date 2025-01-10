@@ -8,7 +8,7 @@ const SideNav = ({ isVisible, setIsVisible }) => {
   return (
     <div
       className={`fixed z-[100] pr-12 left-0 h-screen bg-[#0F1014] p-6 flex flex-col justify-around items-start transition-all duration-300 ${
-        isHovered ? "w-[8%]" : "w-[5%]"
+        isHovered ? "w-[10%]" : "w-[5%]"
       } ${isVisible ? "flex" : "hidden"}  md:flex`}
     >
       <h1
