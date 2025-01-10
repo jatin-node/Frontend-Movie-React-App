@@ -8,8 +8,8 @@ const SideNav = ({ isVisible, setIsVisible }) => {
   return (
     <div
       className={`fixed z-[100] pr-12 left-0 h-screen bg-[#0F1014] p-6 flex flex-col justify-around items-start transition-all duration-300 ${
-        isHovered ? "w-[30%]" : "w-[5%]"
-      } ${isVisible ? "flex" : "hidden"} ${isVisible ? "w-[30%]" : "w-0"} md:flex`}
+        isHovered ? "w-[8%]" : "w-[5%]"
+      } ${isVisible ? "flex" : "hidden"}  md:flex`}
     >
       <h1
         className="text-4xl flex flex-col gap-4 text-white font-bold cursor-pointer"

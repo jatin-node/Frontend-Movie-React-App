@@ -34,11 +34,11 @@ const TopNav = () => {
         {query.length > 0 && (
           <i
             onClick={() => setQuery("")}
-            className="cursor-pointer ml-[15%] text-zinc-400 text-xl md:text-3xl ri-close-large-fill"
+            className="cursor-pointer ml-[1%] text-zinc-400 text-xl md:text-3xl ri-close-large-fill"
           ></i>
         )}
 
-        <div className="z-50 absolute left-[10%] w-[80%] md:w-[50%] max-h-[50vh] bg-zinc-200 top-[90%] overflow-auto">
+        <div className="z-50 absolute md::left-[-10%] left-[10%] w-[80%] sm:w-[80%] md:w-[50%] max-h-[50vh] bg-zinc-200 top-[90%] overflow-auto">
           {searches.map((item, index) => (
             <Link
               to={`/${item.media_type || "movie"}/Details/${item.id}`}
