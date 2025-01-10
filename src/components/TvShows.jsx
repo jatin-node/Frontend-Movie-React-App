@@ -8,6 +8,7 @@ import Cards from "./templates/Cards";
 import SideNav from "./templates/SideNav";
 
 const TvShows = () => {
+  document.title = "MovieApp || TvShows";
   const navigate = useNavigate();
   const [category, setCategory] = useState("on_the_air");
   const [tvShows, setTvShows] = useState([]);

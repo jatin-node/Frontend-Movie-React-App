@@ -24,7 +24,6 @@ export const getMovieDetails = (id) => async (dispatch, getState) => {
       external: external.data,
       watchProviders: watchProviders.data.results.IN,
     };
-    console.log(data);
     dispatch(loadmovie(data));
 
   } catch (error) {

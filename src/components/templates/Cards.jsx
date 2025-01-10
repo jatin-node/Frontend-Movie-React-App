@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import Loader from "../Loader";
 
 const Cards = ({ data, title }) => {
-  console.log(data)
   return data ? (
     <div className="flex flex-wrap h-full w-full px-[3%] bg-[#0F1014]">
       {data.map((c, i) => (

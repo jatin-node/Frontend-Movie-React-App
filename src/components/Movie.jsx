@@ -8,6 +8,7 @@ import axios from "../utils/axios";
 import SideNav from "./templates/SideNav";
 
 const Movie = () => {
+  document.title = "MovieApp || Movies";
   const navigate = useNavigate();
   const [category, setCategory] = useState("now_playing");
   const [movie, setMovie] = useState([]);

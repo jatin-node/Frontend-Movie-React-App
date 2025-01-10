@@ -12,6 +12,7 @@ import Loader from "./Loader";
 import HorizontalCards from "./templates/HorizontalCards";
 
 const MovieDetails = () => {
+  document.title = "MovieApp || Movie-Details";
   const { pathname } = useLocation();
   const { info } = useSelector((state) => state.movie);
   const navigate = useNavigate();
@@ -25,7 +26,6 @@ const MovieDetails = () => {
     };
   }, [id, dispatch]);
 
-  console.log(info);
   return info ? (
     <div
       style={{

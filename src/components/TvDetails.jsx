@@ -13,13 +13,13 @@ import HorizontalCards from "./templates/HorizontalCards";
 import noImage from "../assets/noImage.jpg";
 
 const TvDetails = () => {
+  document.title = "MovieApp || TvShows-Details";
   const { pathname } = useLocation();
   const { info } = useSelector((state) => state.tv);
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const { id } = useParams();
 
-  console.log(info);
   useEffect(() => {
     dispatch(getTvDetails(id));
     return () => {

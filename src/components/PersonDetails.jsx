@@ -13,6 +13,7 @@ import HorizontalCards from "./templates/HorizontalCards";
 import Dropdown from "./templates/Dropdown";
 
 const PeopleDetails = () => {
+  document.title = "MovieApp || Person-Details";
   const { pathname } = useLocation();
   const { info } = useSelector((state) => state.person);
   const navigate = useNavigate();
@@ -26,7 +27,6 @@ const PeopleDetails = () => {
       dispatch(removeperson());
     };
   }, [id, dispatch]);
-  console.log(info);
 
   return info ? (
     <div className="px-4 md:px-[10%] w-full max-h-screen overflow-auto bg-[#0F1014]">

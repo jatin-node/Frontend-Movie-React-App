@@ -7,6 +7,7 @@ import Cards from "./templates/Cards";
 import SideNav from "./templates/SideNav";
 
 const People = () => {
+  document.title = "MovieApp || Person";
   const navigate = useNavigate();
   const [category, setCategory] = useState("popular");
   const [person, setPerson] = useState([]);
